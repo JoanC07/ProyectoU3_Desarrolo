@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+	<title>Plantilla Básica JSF</title>
+</h:head>
+<h:body>
+	<h2 style="font-family: fantasy; size: 50px; color:#0C7492 ;">
+		<h:outputText value="Crear una categoria"></h:outputText>
+	</h2>
+
+		<h:form>
+			<p:panelGrid columns="2">
+			
+				
+				<h:outputText value="Nombre" style="font-family: Roboto; font-size"></h:outputText>
+				<p:inputText value="#{categorias.nombre_categoria}"></p:inputText>
+				
+				<h:outputText value="Descripcion" style="font-family: Roboto; font-size"></h:outputText>
+				<p:inputText value="#{categorias.descripcion}"></p:inputText>
+				
+				
+				<f:facet name="footer">
+					<p:commandButton action="#{categoriasBean.actualizar(categorias)}" value="Agregar" style="color:sky;background-color:#8EE99A; font-family: Roboto; margin-left: 100px;"></p:commandButton>
+				</f:facet>
+			</p:panelGrid>
+		</h:form>
+
+	
+</h:body>
+</html>
